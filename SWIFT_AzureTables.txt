@@ -1,0 +1,34 @@
+SWIFT 專案 Azure Table Storage 清單
+Storage 帳號：fleetivityevents
+整理日期：2026-08-19
+========================================
+
+【Table 名稱】                      【用途】                         【使用服務】
+----------------------------------------------------------------------------------------------------
+PlateRawData                        車牌辨識原始紀錄                  SWIFT_HTTPServer / CheckPointService_1_5 / StatisticsService
+PlateRawDatafortest2                車牌辨識測試用                    SWIFT_HTTPServer（本機 appsettings）
+WasteVolumeRawData                  廢棄物體積原始資料                CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+WasteVolumeManual                   廢棄物體積人工輸入                CheckPointService_1_5 / StatisticsService
+WasteVolumeTotal                    廢棄物體積合計                    CheckPointService_1_5 / StatisticsService
+WasteVolumeCheckPointfortest        廢棄物體積 Checkpoint             CheckPointService_1_5 / CheckPointService_3_4
+ProductRawData                      成品體積原始資料                  CheckPointService_3_4
+ProductVolumeRawData                成品體積原始資料                  StatisticsService
+ProductVolumeManual                 成品體積人工輸入                  StatisticsService
+ProductVolumeTotal                  成品體積合計                      StatisticsService
+ProductVolumeCheckPointfortest      成品體積 Checkpoint               CheckPointService_3_4
+CheckPointStatusTable               Checkpoint 狀態                   CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+SWIFTTrackSheet                     車輛追蹤紀錄                      CheckPointService_1_5 / StatisticsService
+SWIFTAlertTable                     告警資料                          VolumeService / TrackSheetService / AlertMonitor
+DailyInputLog                       每日進場 Log                      CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+MonthlyInputLog                     每月進場 Log                      CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+DailyShipmentLog                    每日出貨 Log                      CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+MonthlyShipmentLog                  每月出貨 Log                      CheckPointService_1_5 / CheckPointService_3_4 / StatisticsService
+MonthlyStockAnalyze                 每月庫存分析                      CheckPointService_3_4
+DailyVolumeStatistics               每日體積統計                      StatisticsService
+DailyAlertStatistics                每日告警統計                      StatisticsService
+
+========================================
+備註：
+- 所有 Table 皆位於 Storage 帳號 fleetivityevents
+- PlateRawDatafortest2 為本機測試用，正式機 appsettings.json 應設為 PlateRawData
+- CheckPointfortest 結尾的 Table 名稱為測試用，正式環境請確認是否需要更名
